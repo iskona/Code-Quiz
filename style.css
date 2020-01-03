@@ -1,0 +1,157 @@
+body {
+    padding: 3%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 2rem;
+}
+
+hr {
+    border-top: none;
+    border-left: none;
+    border-color: #999;
+}
+
+#boxTwo {
+    margin-top: 10%;
+    float: left;
+}
+
+.quizBtn {
+    display: block;
+    background-color: purple;
+    color: #fff;
+    padding: .3rem;
+    font-size: 1rem;
+    margin-bottom: .3rem;
+    border-radius: .2rem;
+}
+
+.quizBtn:hover {
+    background-color: rgb(225, 194, 241);
+    color: purple;
+}
+
+#title {
+    font-weight: bold;
+    float: left;
+    text-align: left;
+}
+
+#checkAns {
+    color: gray;
+    font-style: italic;
+    text-align: left;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+#boxFour {
+    margin-top: 10%;
+    text-align: left;
+    width: 50%;
+}
+
+form {
+    display: inline;
+}
+
+#userName {
+    float: left;
+    border-radius: 3px;
+    width: 8rem;
+    height: 1.5rem;
+    border: 1px solid #999;
+    margin-bottom: 1rem;
+}
+
+#submitNameScore {
+    float: left;
+    margin-left: 2%;
+    background-color: purple;
+    color: #fff;
+    border-radius: 3px;
+    padding: .2rem;
+}
+
+#view-highscores {
+    float: left;
+    color: purple;
+    font-size: 18px;
+}
+#time {
+    float: right;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#startQuiz {
+    font-size: 20px;
+    background-color: purple;
+    color: #fff;
+    border-radius: 3px;
+    padding: .5rem;
+    margin-bottom: 20px;
+}
+
+#startQuiz:hover {
+    background-color: rgb(225, 194, 241);
+    color: purple;
+}
+
+.startHidden {
+    display: none;
+}
+
+#go-back, #clear {
+    font-size: .8rem;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    background-color: purple;
+    color: #fff;
+}
+
+#go-back:hover, #clear:hover {
+    background-color: rgb(225, 194, 241);
+    color: purple;
+    font-weight: bold;
+}
+
+li {
+    text-align: justify;
+    border: 1px solid #eee;
+    border-radius: .3rem;
+    margin: 1%;
+    padding: 1%;
+    background-color: rgb(225, 194, 241);
+}
+
+.quizWrap {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.go-home {
+    font-size: .8rem;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    background-color: purple;
+    color: #fff;
+}
+
+.go-home:hover {
+    background-color: rgb(225, 194, 241);
+    color: purple;
+    font-weight: bold;
+}
