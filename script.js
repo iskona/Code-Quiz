@@ -15,9 +15,9 @@ let secondsLeft = questions.length * 15;
 let currentIndex = 0;
 let score = 0;
 
-
 // Functions
-startQuiz.addEventListener("click", function() {
+startQuiz.addEventListener("click", function () {
+
     startTimer();
     console.log("On Start-click current index: " + currentIndex);
     boxOne.style.display = "none";
@@ -26,19 +26,27 @@ startQuiz.addEventListener("click", function() {
 });
 
 function startTimer() {
-    let interval = setInterval(function() {
+
+    let interval = setInterval(function () {
         secondsLeft--;
         timer.textContent = secondsLeft;
-        if(secondsLeft === 0) {
+
+        if (secondsLeft === 0) {
+
             clearInterval(interval);
             boxTwo.setAttribute("style", "display: none");
             boxThree.setAttribute("style", "display: initial");
 
-        } else if(currentIndex === questions.length) {
+        } else if (currentIndex === questions.length) {
+
             clearInterval(interval);
             boxTwo.setAttribute("style", "display: none");
             boxFour.setAttribute("style", "display: initial");
-            if(score === null) {
+
+            score = score * secondsLeft;
+            console.log("Time-based score: ", score);
+
+            if (score === null) {
                 yourScore.textContent = "Your score is: 0";
             } else {
                 yourScore.textContent = score;
@@ -48,6 +56,7 @@ function startTimer() {
 };
 
 function showQs() {
+
     let question = questions[currentIndex];
     document.getElementById("title").textContent = question.title;
     document.getElementById("chA").textContent = question.choices[0];
@@ -57,25 +66,33 @@ function showQs() {
 };
 
 for (let i = 0; i < quizBtn.length; i++) {
-    quizBtn[i].addEventListener("click", function(event) {
+
+    quizBtn[i].addEventListener("click", function (event) {
+
         if (event.currentTarget.innerText === questions[currentIndex].answer) {
             score++;
             console.log("Score: " + score);
             checkAns.textContent = "Last one was CORRECT";
+            console.log("Correct");
+
         } else {
             checkAns.textContent = "Last one was WRONG";
             secondsLeft -= 15;
+            console.log("Wrong");
+
         }
+
         console.log("Question Index before ++: " + currentIndex);
         currentIndex++;
+
         if (currentIndex < questions.length) {
             showQs();
         }
     });
 };
 
-submitBtn.addEventListener("click", function() {
-    
+submitBtn.addEventListener("click", function () {
+
     let initials = userName.value;
 
     let finalScore = {
